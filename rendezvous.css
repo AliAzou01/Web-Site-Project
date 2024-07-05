@@ -1,0 +1,162 @@
+body {
+    background: transparent;
+    font-family: "Poppins";
+}
+
+#immg {
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 48px;
+    width: 48px;
+
+}
+
+section#appointment {
+    background-color: white;
+    margin: 150px auto;
+    height: 380px;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: rgba(18, 18, 18, 0.8);
+    transition: box-shadow 0.3s ease-out;
+}
+
+section#appointment:hover {
+    box-shadow: 0 0 13px rgba(18, 18, 18, 0.8);
+}
+
+section #appointment .cont {
+    padding: 70px 15px;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+
+}
+
+section#appointment .cont .formulaire {
+    width: 60%;
+    float: right;
+
+
+}
+
+section#appointment .cont .formulaire h3 {
+    font-size: 2rem;
+    color: #2a2a2a;
+    margin-bottom: 50px;
+}
+
+section#appointment .cont .formulaire form {
+    justify-content: space-evenly;
+}
+
+section#appointment .cont .formulaire input,
+section#appointment .cont .formulaire select {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #e4e4ec;
+    transition: 0.2s;
+    padding: 10px;
+}
+
+section#appointment .cont .formulaire input:hover,
+section#appointment .cont .formulaire select:hover {
+    border-bottom: 2px solid #1fb3bf;
+}
+
+
+
+section#appointment .cont .formulaire-image {
+    width: 40%;
+    height: 100%;
+    border-radius: 15px;
+    padding-right: 50px;
+}
+
+section#appointment .cont .formulaire-image img {
+    width: 95%;
+    border-radius: 15px;
+}
+
+section#appointment .cont .formulaire input.firstname,
+section#appointment .cont .formulaire input.lastname {
+    width: 39%;
+}
+
+section#appointment .cont .formulaire input.date,
+section#appointment .cont .formulaire input.number,
+section#appointment .cont .formulaire select.doctor {
+    width: 28%;
+}
+
+
+section#appointment .cont .formulaire #submit {
+    width: 165px;
+    height: 45px;
+    border-radius: 12px 36px;
+    background: linear-gradient(90deg, #0162c8, #55e7fc);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 185px;
+    overflow: hidden;
+    letter-spacing: 2px;
+    position: relative;
+    transition: 0.3s ease;
+
+}
+
+#submit:hover {
+    box-shadow: 0 0 5px #55e7fc,
+        0 0 20px #55e7fc,
+        0 0 60px #0162c8,
+        0 0 150px #0162c8;
+
+}
+
+section#appointment .cont .formulaire #submit:nth-child(2) {
+    background: linear-gradient(90deg, #55e7fc, #0162c8);
+}
+
+span {
+    position: absolute;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animate 1s linear infinite;
+}
+
+
+
+
+
+/*section#appointment .cont .formulaire #submit::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+
+}
+
+section#appointment .cont .formulaire #submit ::before {
+    transform: scaleX(0);
+}
+
+section#appointment .cont .formulaire #submit:hover::before {
+    transform: scaleX(1);
+}*/

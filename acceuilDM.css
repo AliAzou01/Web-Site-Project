@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: #eee;
+
+}
+
+.contenu {
+    flex: 1 0 auto;
+}
+
+
+/*----------------slider------------*/
+
+
+#slider {
+    background-color: #ccc;
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+#img {
+    width: 100%;
+    height: 400px;
+    position: relative;
+
+}
+
+#btn_left {
+    height: 550px;
+    width: 100px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+}
+
+#btn_right {
+    height: 550px;
+    width: 100px;
+    right: 0px;
+    top: 0px;
+    position: absolute;
+}
+
+.left {
+    position: absolute;
+    top: 40%;
+    left: 10px;
+    width: 60px;
+    height: 70px;
+    opacity: 0.5;
+
+}
+
+.left:hover {
+    opacity: 1;
+}
+
+.right {
+    position: absolute;
+    top: 40%;
+    right: 10px;
+    width: 60px;
+    height: 70px;
+    opacity: 0.5;
+}
+
+.right:hover {
+    opacity: 1;
+}
+
+.entete_titre {
+    background: #F00A3C;
+    text-align: center;
+    color: white;
+    padding: 40px;
+    top: 60%;
+    position: absolute;
+    line-height: normal;
+    border-radius: 7px;
+}
+
+.entete_titre h1 {
+    font-size: 40px;
+    line-height: normal;
+}
+
+/* ------le champ de recherche-------------*/
+.boxx{
+    position: absolute;
+    top: 10px;
+    margin-right: 20px;
+    z-index: 999;
+}
+.boxx h1{
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+}
+.boxx input{
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 20px;
+    transition: .5s;
+
+}
+.boxx input [type="text"]{
+background: #fff;
+width: 340px;
+height: 50px;
+border: none;
+outline: none;
+padding: 0 25px;
+border-radius: 25px 0 0 25px;
+}
+.boxx input [type="submit"]{
+    position: relative;
+    border-radius: 0 25px 25px 0;
+    width: 150px;
+    height: 50px;
+}
+/*------menu------*/
+#menu {
+    background: black;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    z-index: 999;
+    height: 50px;
+}
+
+#menu ul {
+    overflow: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    float: left;
+}
+
+#menu a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    display: block;
+    padding: 13px 17px;
+}
+
+#menu a:hover:not(.active) {
+    transition: 0.8s;
+    background: #F00A3C;
+}
+
+.active {
+    background: #F00A3C;
+}
+
+
+
+/*------------contenue-------------*/
+
+
+#contenu {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0 0 0;
+    border-bottom-width: 0px;
+}
+
+#contenu h1 {
+    font-size: 26px;
+
+    margin-top: 20px;
+    color: #676162;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+.cercle {
+    width: 180px;
+    height: 180px;
+
+    background: url(image/pilule.jpg);
+    background-size: 100% 100%;
+    border-radius: 50%;
+    float: left;
+    shape-outside: circle();
+    margin: 30px;
+    margin-top: 100px;
+}
+
+p {
+    text-align: justify;
+    line-height: 24px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #313030;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+}
+
+.pic {
+    position: relative;
+    float: left;
+    width: 28%;
+    height: 50px;
+    text-align: center;
+    margin: 10px 20px 80px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 7px grey;
+
+}
+
+.pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.pic::before {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .2s;
+}
+
+#chirurgie::before {
+    content: "chirurgie";
+}
+
+#vaccin::before {
+    content: "vaccin";
+}
+
+#accouchement::before {
+    content: "accouchement";
+}
+
+.pic::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    height: 0;
+    background-color: rgba(0, 0, 0, .4);
+    transition: .3s;
+}
+
+.pic:hover::after {
+    height: 100%;
+}
+
+.pic:hover::before {
+    margin-top: 0;
+    opacity: 1;
+}
+
+
+
+
+
+
+/*--------Mes articles-------*/
+
+.container {
+
+    width: 100%;
+    margin: 10px auto;
+}
+
+.all_cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    padding-left: 80px;
+}
+
+.card {
+    margin-right: 50px;
+    margin-top: 20px;
+    border: solid 1px #000;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.all_cards img{
+    width: 300px;
+
+}
+
+
+
+
+
+/*---------footer-----------*/
+
+.footer {
+    background-color: #011c39;
+    padding: 70px 0px 5px 0px;
+}
+
+.footer .box-container {
+
+    max-width: 1170px;
+    margin: auto;
+
+}
+
+.roww {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.box {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.box h3 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 38px;
+    font-weight: 500;
+    position: relative;
+}
+
+.box h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.box ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.box ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.5s ease;
+}
+
+.box ul {
+    padding-left: 0px;
+}
+
+.box ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.box .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, .2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.box .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+@media(max-width: 767px) {
+    .box {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .box {
+        width: 100%;
+    }
+}
